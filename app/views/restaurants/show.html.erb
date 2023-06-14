@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="title">
+    <h1><%= @restaurant.name %></h1>
+  </div>
+
+  <div class="bg-light bg-gradient card mb-3 p-3">
+    <h6>Informations :</h6>
+    <p>Adresse: <%=  @restaurant.address%></p>
+    <p>Categorie: <%= @restaurant.category %></p>
+    <p>Numéro de télephone : <%= @restaurant.phone_number %></p>
+
+  <div class="border-top pt-3 d-flex gap-5">
+    <p class="button-action"><i class="fa-solid fa-rotate-left"></i> <%= link_to 'Retour', restaurants_path %></p>
+    <p class="button-action"><i class="fa-sharp fa-solid fa-eye"></i> <%= link_to 'Voir les Avis', restaurant_reviews_path(@restaurant) %></p>
+  </div>
+
+  <div class="border-top pt-3">
+    <h6>Donnez votre avis :</h6>
+    <%= render 'reviews/form' %>
+  </div>
+</div>

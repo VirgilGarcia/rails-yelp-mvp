@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="title">
+    <h1>Ajouter une nouveau Restaurant</h1>
+  <div>
+  <div class="task">
+    <%= render 'form', restaurant: @restaurant %>
+    <p class="button-action border-top mt-3 pt-2"><i class="fa-solid fa-rotate-left"></i> <%= link_to "Annuler", restaurants_path %></p>
+  </div>
+</div>
